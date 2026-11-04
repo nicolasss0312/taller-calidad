@@ -1,7 +1,7 @@
 # Informe · Taller: calidad en un mini-pipeline ETL
 
 **Curso:** Arquitectura de datos · Pruebas de software y garantía de calidad
-**Autores (parejas):** Nicolás Cuervo · [pareja] · **Fecha:** 3 de noviembre de 2026
+**Autores (parejas):** Nicolás Cuervo · Jacobo Ramirez · **Fecha:** 3 de noviembre de 2026
 **Herramientas:** Python 3.11.16 · pytest 9.2.0 · pytest-cov 7.1.0 · SonarQube 10.7 Community (Docker) · sonar-scanner-cli
 
 ## 1. Resultados

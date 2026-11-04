@@ -1,0 +1,105 @@
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+03:55:47.623 INFO  Scanner configuration file: /opt/sonar-scanner/conf/sonar-scanner.properties
+03:55:47.626 INFO  Project root configuration file: /usr/src/sonar-project.properties
+03:55:47.642 INFO  SonarScanner CLI 8.3.1.16491
+03:55:47.659 INFO  Linux 7.0.12-linuxkit amd64
+03:55:48.849 INFO  Communicating with SonarQube Community Build 26.10.0.133078
+03:55:48.852 INFO  JRE provisioning: os[linux], arch[x86_64]
+03:55:51.583 INFO  Starting SonarScanner Engine...
+03:55:51.583 INFO  Java 21.0.12.1 Eclipse Adoptium (64-bit)
+03:55:53.158 INFO  Load global settings
+03:55:53.402 INFO  Load global settings (done) | time=242ms
+03:55:53.408 INFO  Server id: 147B411E-AaGkrer9DRtXgXFDcRBE
+03:55:53.450 INFO  Loading required plugins
+03:55:53.452 INFO  Load plugins index
+03:55:53.476 INFO  Load plugins index (done) | time=24ms
+03:55:53.477 INFO  Load/download plugins
+03:55:53.826 INFO  Load/download plugins (done) | time=348ms
+03:55:54.243 INFO  Load project settings for component key: 'taller-calidad'
+03:55:54.272 INFO  Load project settings for component key: 'taller-calidad' (done) | time=30ms
+03:55:54.292 INFO  Process project properties
+03:55:54.307 INFO  Process project properties (done) | time=15ms
+03:55:54.316 INFO  Project key: taller-calidad
+03:55:54.316 INFO  Base dir: /usr/src
+03:55:54.317 INFO  Working dir: /tmp/.scannerwork
+03:55:54.544 INFO  Load quality profiles
+03:55:54.592 INFO  Load quality profiles (done) | time=49ms
+03:55:54.645 INFO  Load active rules
+03:55:54.879 INFO  Load active rules (done) | time=232ms
+03:55:54.900 INFO  Load analysis cache
+03:55:54.921 INFO  Load analysis cache (3.6 kB) | time=21ms
+03:55:55.059 INFO  Preprocessing files...
+03:55:55.115 INFO  1 language detected in 6 preprocessed files (done) | time=56ms
+03:55:55.116 INFO  6 files ignored because of scm ignore settings
+03:55:55.125 INFO  Loading plugins for detected languages
+03:55:55.126 INFO  Load/download plugins
+03:55:55.237 INFO  Load/download plugins (done) | time=112ms
+03:55:55.411 INFO  Load project repositories
+03:55:55.592 INFO  Load project repositories (done) | time=179ms
+03:55:55.716 INFO  Indexing files...
+03:55:55.716 INFO  Project configuration:
+03:55:55.737 INFO  6 files indexed (done) | time=20ms
+03:55:55.740 INFO  Quality profile for py: Sonar way core
+03:55:55.741 INFO  ------------- Run sensors on module taller-calidad
+03:55:55.823 INFO  Load metrics repository
+03:55:55.873 INFO  Load metrics repository (done) | time=50ms
+03:55:56.296 INFO  Sensor IaC YAML File Type Classification Sensor [iac]
+03:55:56.299 INFO  Sensor IaC YAML File Type Classification Sensor [iac] (done) | time=3ms
+03:55:56.300 INFO  Sensor IaC hadolint report Sensor [iac]
+03:55:56.301 INFO  Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+03:55:56.301 INFO  Sensor Java Config Sensor [iac]
+03:55:56.301 INFO  There are no files to be analyzed for the Java language
+03:55:56.302 INFO  Sensor Java Config Sensor [iac] (done) | time=1ms
+03:55:56.302 INFO  Sensor IaC Docker Sensor [iac]
+03:55:56.306 INFO  There are no files to be analyzed for the Docker language
+03:55:56.307 INFO  Sensor IaC Docker Sensor [iac] (done) | time=3ms
+03:55:56.307 INFO  Sensor Python Sensor [python]
+03:55:56.656 INFO  Starting global symbols computation
+03:55:56.659 INFO  6 source files to be analyzed
+03:55:57.427 INFO  6/6 source files have been analyzed
+03:55:57.428 INFO  Finished step global symbols computation in 770ms
+03:55:57.447 INFO  Starting rules execution
+03:55:57.447 INFO  6 source files to be analyzed
+03:55:58.294 INFO  6/6 source files have been analyzed
+03:55:58.295 INFO  Finished step rules execution in 847ms
+03:55:58.295 INFO  The Python analyzer was able to leverage cached data from previous analyses for 0 out of 6 files. These files were not parsed.
+03:55:58.296 INFO  Sensor Python Sensor [python] (done) | time=1991ms
+03:55:58.296 INFO  Sensor Cobertura Sensor for Python coverage [python]
+03:55:58.322 INFO  Python test coverage
+03:55:58.325 INFO  Parsing report '/usr/src/coverage.xml'
+03:55:58.358 INFO  Sensor Cobertura Sensor for Python coverage [python] (done) | time=61ms
+03:55:58.358 INFO  Sensor PythonXUnitSensor [python]
+03:55:58.377 INFO  Sensor PythonXUnitSensor [python] (done) | time=19ms
+03:55:58.377 INFO  Sensor Python Dependency Sensor [python]
+03:55:58.380 INFO  Sensor Python Dependency Sensor [python] (done) | time=2ms
+03:55:58.380 INFO  Sensor TextAndSecretsSensor [text]
+03:55:58.418 INFO  Available processors: 10
+03:55:58.419 INFO  Using 10 threads for analysis.
+03:55:58.917 INFO  Start fetching files for the text and secrets analysis
+03:55:58.964 INFO  Using Git CLI to retrieve dirty files
+03:55:59.030 INFO  Retrieving language associated files and files included via "sonar.text.inclusions" that are tracked by git
+03:55:59.031 INFO  Starting the text and secrets analysis
+03:55:59.034 INFO  6 source files to be analyzed for the text and secrets analysis
+03:55:59.093 INFO  6/6 source files have been analyzed for the text and secrets analysis
+03:55:59.099 INFO  Sensor TextAndSecretsSensor [text] (done) | time=719ms
+03:55:59.110 INFO  ------------- Run sensors on project
+03:55:59.264 INFO  Sensor IaC Project Sensor [iac]
+03:55:59.269 INFO  Sensor IaC Project Sensor [iac] (done) | time=5ms
+03:55:59.269 INFO  Sensor Zero Coverage Sensor
+03:55:59.270 INFO  Sensor Zero Coverage Sensor (done) | time=0ms
+03:55:59.271 INFO  ------------- Gather SCA dependencies on project
+03:55:59.291 INFO  Dependency analysis skipped
+03:55:59.301 INFO  CPD Executor 1 file had no CPD blocks
+03:55:59.301 INFO  CPD Executor Calculating CPD for 2 files
+03:55:59.309 INFO  CPD Executor CPD calculation finished (done) | time=7ms
+03:55:59.326 INFO  SCM revision ID 'b27644187a513d81fb506196c8446c95c67cdef0'
+03:55:59.418 INFO  Analysis report generated in 100ms, dir size=168.0 kB
+03:55:59.432 INFO  Analysis report compressed in 13ms, zip size=30.7 kB
+03:55:59.492 INFO  Analysis report uploaded in 58ms
+03:55:59.499 INFO  ANALYSIS SUCCESSFUL, you can find the results at: http://host.docker.internal:9000/dashboard?id=taller-calidad
+03:55:59.500 INFO  Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+03:55:59.500 INFO  More about the report processing at http://host.docker.internal:9000/api/ce/task?id=237fc93b-f50f-4ebb-b0cd-2b369043454a
+03:55:59.535 INFO  Analysis total time: 7.881 s
+03:55:59.539 INFO  SonarScanner Engine completed successfully
+03:55:59.586 INFO  EXECUTION SUCCESS
+03:55:59.592 INFO  Total time: 11.967s

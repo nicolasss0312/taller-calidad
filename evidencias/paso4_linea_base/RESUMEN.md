@@ -2,7 +2,6 @@
 
 | Condición | Valor | Umbral | Estado |
 |---|---|---|---|
-| new_violations | 0 | 0 | OK |
 
 ## Métricas
 

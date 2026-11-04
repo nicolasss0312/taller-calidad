@@ -1,0 +1,20 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.11.16, pytest-9.2.0, pluggy-1.7.0
+rootdir: /Users/nicolascuervo/universidad/arquitectura/pruebas-software-QA/taller-calidad
+plugins: cov-7.1.0
+collected 37 items
+
+tests/test_integracion.py ......                                         [ 16%]
+tests/test_transform.py ...............................                  [100%]
+
+================================ tests coverage ================================
+______________ coverage: platform darwin, python 3.11.16-final-0 _______________
+
+Name               Stmts   Miss  Cover   Missing
+------------------------------------------------
+etl/__init__.py        0      0   100%
+etl/pipeline.py        9      0   100%
+etl/transform.py      13      0   100%
+------------------------------------------------
+TOTAL                 22      0   100%
+============================== 37 passed in 0.04s ==============================

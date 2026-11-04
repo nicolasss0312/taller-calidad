@@ -29,7 +29,7 @@ done
 echo "Compute Engine: $estado"
 
 curl -s -u "$SONAR_TOKEN:" "$HOST/api/qualitygates/project_status?projectKey=$KEY" > "$SALIDA/quality_gate.json"
-curl -s -u "$SONAR_TOKEN:" "$HOST/api/issues/search?componentKeys=$KEY&ps=500" > "$SALIDA/issues.json"
+curl -s -u "$SONAR_TOKEN:" "$HOST/api/issues/search?componentKeys=$KEY&ps=500&resolved=false" > "$SALIDA/issues.json"
 curl -s -u "$SONAR_TOKEN:" "$HOST/api/hotspots/search?project=$KEY&ps=500" > "$SALIDA/hotspots.json"
 curl -s -u "$SONAR_TOKEN:" "$HOST/api/measures/component?component=$KEY&metricKeys=bugs,vulnerabilities,security_hotspots,code_smells,coverage,duplicated_lines_density,ncloc,security_rating,reliability_rating,sqale_rating" > "$SALIDA/metricas.json"
 python3 scripts/resumen.py "$SALIDA" | tee "$SALIDA/RESUMEN.md"

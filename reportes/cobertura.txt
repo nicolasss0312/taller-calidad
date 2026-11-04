@@ -1,0 +1,81 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.11.16, pytest-9.2.0, pluggy-1.7.0 -- /Users/nicolascuervo/universidad/arquitectura/pruebas-software-QA/taller-calidad/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/nicolascuervo/universidad/arquitectura/pruebas-software-QA/taller-calidad
+plugins: cov-7.1.0
+collecting ... collected 61 items
+
+tests/test_integracion.py::test_pipeline_carga_clientes PASSED           [  1%]
+tests/test_integracion.py::test_pipeline_retorna_filas_cargadas PASSED   [  3%]
+tests/test_integracion.py::test_pipeline_es_idempotente PASSED           [  4%]
+tests/test_integracion.py::test_pipeline_actualiza_registro_existente PASSED [  6%]
+tests/test_integracion.py::test_pipeline_email_invalido_no_carga_nada PASSED [  8%]
+tests/test_integracion.py::test_pipeline_csv_vacio PASSED                [  9%]
+tests/test_reportes.py::test_buscar_cliente_encuentra_por_email PASSED   [ 11%]
+tests/test_reportes.py::test_buscar_cliente_inexistente PASSED           [ 13%]
+tests/test_reportes.py::test_buscar_cliente_resiste_inyeccion_sql[' OR '1'='1] PASSED [ 14%]
+tests/test_reportes.py::test_buscar_cliente_resiste_inyeccion_sql[' OR 1=1 --] PASSED [ 16%]
+tests/test_reportes.py::test_buscar_cliente_resiste_inyeccion_sql[ana@mail.com' --] PASSED [ 18%]
+tests/test_reportes.py::test_buscar_cliente_resiste_inyeccion_sql[x'; DROP TABLE clientes; --] PASSED [ 19%]
+tests/test_reportes.py::test_evaluar_regla[regla0-True] PASSED           [ 21%]
+tests/test_reportes.py::test_evaluar_regla[regla1-False] PASSED          [ 22%]
+tests/test_reportes.py::test_evaluar_regla[regla2-True] PASSED           [ 24%]
+tests/test_reportes.py::test_evaluar_regla[regla3-False] PASSED          [ 26%]
+tests/test_reportes.py::test_evaluar_regla[regla4-True] PASSED           [ 27%]
+tests/test_reportes.py::test_evaluar_regla[regla5-True] PASSED           [ 29%]
+tests/test_reportes.py::test_evaluar_regla[regla6-True] PASSED           [ 31%]
+tests/test_reportes.py::test_evaluar_regla_rechaza_operador_no_permitido[and] PASSED [ 32%]
+tests/test_reportes.py::test_evaluar_regla_rechaza_operador_no_permitido[__import__('os')] PASSED [ 34%]
+tests/test_reportes.py::test_evaluar_regla_rechaza_operador_no_permitido[**] PASSED [ 36%]
+tests/test_reportes.py::test_evaluar_regla_rechaza_operador_no_permitido[] PASSED [ 37%]
+tests/test_reportes.py::test_evaluar_regla_no_ejecuta_codigo PASSED      [ 39%]
+tests/test_reportes.py::test_total[filas0-30.5] PASSED                   [ 40%]
+tests/test_reportes.py::test_total[filas1-0] PASSED                      [ 42%]
+tests/test_reportes.py::test_total_falla_explicitamente[filas0] PASSED   [ 44%]
+tests/test_reportes.py::test_total_falla_explicitamente[filas1] PASSED   [ 45%]
+tests/test_reportes.py::test_total_falla_explicitamente[None] PASSED     [ 47%]
+tests/test_reportes.py::test_db_password_se_lee_del_entorno PASSED       [ 49%]
+tests/test_transform.py::test_normalizar_email_valido[ Ana@Mail.COM -ana@mail.com] PASSED [ 50%]
+tests/test_transform.py::test_normalizar_email_valido[luis.p+datos@uni.edu.co-luis.p+datos@uni.edu.co] PASSED [ 52%]
+tests/test_transform.py::test_normalizar_email_valido[\tMARIA_G@Empresa.org\n-maria_g@empresa.org] PASSED [ 54%]
+tests/test_transform.py::test_normalizar_email_invalido[] PASSED         [ 55%]
+tests/test_transform.py::test_normalizar_email_invalido[ ] PASSED        [ 57%]
+tests/test_transform.py::test_normalizar_email_invalido[sin-arroba] PASSED [ 59%]
+tests/test_transform.py::test_normalizar_email_invalido[None] PASSED     [ 60%]
+tests/test_transform.py::test_normalizar_email_formato_incorrecto[ana@] PASSED [ 62%]
+tests/test_transform.py::test_normalizar_email_formato_incorrecto[@mail.com] PASSED [ 63%]
+tests/test_transform.py::test_normalizar_email_formato_incorrecto[ana@mail] PASSED [ 65%]
+tests/test_transform.py::test_normalizar_email_formato_incorrecto[123] PASSED [ 67%]
+tests/test_transform.py::test_normalizar_email_mensaje_incluye_valor_original PASSED [ 68%]
+tests/test_transform.py::test_calcular_total_con_descuento[100-2-0.1-180.0] PASSED [ 70%]
+tests/test_transform.py::test_calcular_total_con_descuento[100-2-0.5-100.0] PASSED [ 72%]
+tests/test_transform.py::test_calcular_total_con_descuento[50-3-0.25-112.5] PASSED [ 73%]
+tests/test_transform.py::test_calcular_total_casos_limite[100-2-0-200.0] PASSED [ 75%]
+tests/test_transform.py::test_calcular_total_casos_limite[100-2-1-0.0] PASSED [ 77%]
+tests/test_transform.py::test_calcular_total_casos_limite[100-0-0.3-0.0] PASSED [ 78%]
+tests/test_transform.py::test_calcular_total_casos_limite[0-5-0.2-0.0] PASSED [ 80%]
+tests/test_transform.py::test_calcular_total_descuento_por_defecto PASSED [ 81%]
+tests/test_transform.py::test_calcular_total_negativos[-1-2] PASSED      [ 83%]
+tests/test_transform.py::test_calcular_total_negativos[10--1] PASSED     [ 85%]
+tests/test_transform.py::test_calcular_total_negativos[-5--5] PASSED     [ 86%]
+tests/test_transform.py::test_calcular_total_descuento_fuera_de_rango[1.01] PASSED [ 88%]
+tests/test_transform.py::test_calcular_total_descuento_fuera_de_rango[2] PASSED [ 90%]
+tests/test_transform.py::test_calcular_total_descuento_fuera_de_rango[-0.01] PASSED [ 91%]
+tests/test_transform.py::test_calcular_total_descuento_fuera_de_rango[-1] PASSED [ 93%]
+tests/test_transform.py::test_calcular_total_redondeo[19.99-3-0.15-50.97] PASSED [ 95%]
+tests/test_transform.py::test_calcular_total_redondeo[10.555-1-0-10.55] PASSED [ 96%]
+tests/test_transform.py::test_calcular_total_redondeo[0.1-3-0-0.3] PASSED [ 98%]
+tests/test_transform.py::test_calcular_total_redondeo[33.33-3-0.333-66.69] PASSED [100%]
+
+================================ tests coverage ================================
+______________ coverage: platform darwin, python 3.11.16-final-0 _______________
+
+Name               Stmts   Miss  Cover   Missing
+------------------------------------------------
+etl/__init__.py        0      0   100%
+etl/pipeline.py        9      0   100%
+etl/reportes.py       17      0   100%
+etl/transform.py      13      0   100%
+------------------------------------------------
+TOTAL                 39      0   100%
+============================== 61 passed in 0.09s ==============================

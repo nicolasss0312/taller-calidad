@@ -5,3 +5,4 @@ __pycache__/
 .pytest_cache/
 .scannerwork/
 coverage.xml
+.DS_Store

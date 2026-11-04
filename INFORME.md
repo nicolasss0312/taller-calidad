@@ -52,6 +52,16 @@ Quality Gate **Sonar way** antes de corregir: **ERROR**, con `new_violations = 2
 
 Quality Gate después de corregir: **OK**, con `new_violations = 0`, `new_coverage = 100 %`, `new_duplicated_lines_density = 0 %` y 0 hotspots abiertos. Los issues S5754 y S1172 quedaron `CLOSED / FIXED`.
 
+### Capturas de SonarQube
+
+| Antes (con defectos) | Después (corregido) |
+|---|---|
+| ![Quality Gate Failed](evidencias/antes/01_overview_failed.png) | ![Quality Gate Passed](evidencias/despues/01_overview_passed.png) |
+| ![Issues antes](evidencias/antes/02_issues.png) | ![Issues después](evidencias/despues/02_issues.png) |
+| ![Hotspots antes](evidencias/antes/03_hotspots.png) | ![Hotspots después](evidencias/despues/03_hotspots.png) |
+
+Historial de análisis: [04_activity.png](evidencias/despues/04_activity.png) · Cobertura de `reportes.py`: [05_reportes_cobertura.png](evidencias/despues/05_reportes_cobertura.png)
+
 ## 4. Reflexión
 
 - **La cobertura no es calidad.** Antes de agregar `reportes.py` teníamos un 100 % de cobertura, y aun así la inyección SQL habría pasado inadvertida si no hubiéramos escrito una prueba con una entrada maliciosa. La cobertura mide qué líneas se ejecutan, no si las aserciones son buenas.
